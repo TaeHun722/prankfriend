@@ -123,7 +123,8 @@
             align-items: center;
             padding: 0 12px;
             font-size: 13px;
-            color: #888;
+            color: #333;
+            font-weight: 500;
         }
 
         .form-textarea-mock {
@@ -134,7 +135,8 @@
             border-radius: 4px;
             padding: 10px 12px;
             font-size: 13px;
-            color: #888;
+            color: #333;
+            resize: none;
         }
 
         .btn-enter {
@@ -293,7 +295,7 @@
                 </p>
             </div>
 
-            <!-- 실제 방명록 입력 칸처럼 보이는 위장 폼 -->
+            <!-- 실제 방명록 입력 칸처럼 보이는 위장 폼 (황정민 맞춤형 자동 입력 연출) -->
             <div class="fake-form-box">
                 <div class="form-group">
                     <label>작성자 이름</label>
@@ -301,13 +303,13 @@
                 </div>
                 <div class="form-group">
                     <label>축하 메시지</label>
-                    <div class="form-textarea-mock"></div>
+                    <textarea class="form-textarea-mock" readonly></textarea>
                 </div>
             </div>
         </div>
 
         <button class="btn-enter" onclick="triggerPrank()">
-            방명록 최종 등록 및 초대장 발급
+            방명록 최종 등록 및 축하 메시지 전송
         </button>
     </div>
 
@@ -339,12 +341,7 @@
             document.getElementById('invitation-screen').style.display = 'none';
             document.getElementById('prank-screen').style.display = 'flex';
 
-            // 2. 스마트폰 강력한 진동 울리기
-            if (navigator.vibrate) {
-                navigator.vibrate([400, 100, 400, 100, 600, 200, 800]);
-            }
-
-            // 3. 사방에서 폭죽 난사하기
+            // 2. 사방에서 폭죽 난사하기
             var duration = 6 * 1000;
             var end = Date.now() + duration;
 
