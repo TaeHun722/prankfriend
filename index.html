@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,11 @@
     <meta property="og:title" content="방명록 작성 — 2026 연세대 디자인예술학부 졸업전시회">
     <meta property="og:description" content="제22회 졸업전시회 방명록에 따뜻한 축하의 메시지를 남겨주세요.">
     <title>GUESTBOOK — YVCD GRADUATION SHOW</title>
-    
+
     <!-- 폰트 설정 -->
-    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Montserrat:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Montserrat:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <!-- 폭죽 효과 라이브러리 -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
@@ -21,7 +24,8 @@
         }
 
         body {
-            background-color: #ffffff; /* 순백색 배경 */
+            background-color: #ffffff;
+            /* 순백색 배경 */
             color: #111111;
             font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
             display: flex;
@@ -38,7 +42,7 @@
             background: #ffffff;
             min-height: 100vh;
             padding: 45px 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -171,39 +175,76 @@
         }
 
         @keyframes bgCrazy {
-            0% { background-color: #ff0055; color: #fff; }
-            33% { background-color: #ffe600; color: #000; }
-            66% { background-color: #00ffff; color: #000; }
-            100% { background-color: #7a00ff; color: #fff; }
+            0% {
+                background-color: #ff0055;
+                color: #fff;
+            }
+
+            33% {
+                background-color: #ffe600;
+                color: #000;
+            }
+
+            66% {
+                background-color: #00ffff;
+                color: #000;
+            }
+
+            100% {
+                background-color: #7a00ff;
+                color: #fff;
+            }
         }
 
         @keyframes crazyShake {
-            0% { transform: translate(6px, 6px) rotate(0deg) scale(1); }
-            20% { transform: translate(-10px, 0px) rotate(-6deg) scale(1.12); }
-            40% { transform: translate(6px, -6px) rotate(6deg) scale(0.92); }
-            60% { transform: translate(-6px, 10px) rotate(-4deg) scale(1.08); }
-            80% { transform: translate(10px, -4px) rotate(5deg) scale(0.98); }
-            100% { transform: translate(-4px, -6px) rotate(-6deg) scale(1.1); }
+            0% {
+                transform: translate(6px, 6px) rotate(0deg) scale(1);
+            }
+
+            20% {
+                transform: translate(-10px, 0px) rotate(-6deg) scale(1.12);
+            }
+
+            40% {
+                transform: translate(6px, -6px) rotate(6deg) scale(0.92);
+            }
+
+            60% {
+                transform: translate(-6px, 10px) rotate(-4deg) scale(1.08);
+            }
+
+            80% {
+                transform: translate(10px, -4px) rotate(5deg) scale(0.98);
+            }
+
+            100% {
+                transform: translate(-4px, -6px) rotate(-6deg) scale(1.1);
+            }
         }
 
         .shake-text {
             font-size: 46px;
             line-height: 1.25;
             margin-bottom: 20px;
-            text-shadow: 4px 4px 0px rgba(0,0,0,0.6);
+            text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.6);
             animation: crazyShake 0.12s infinite;
             word-break: keep-all;
         }
 
         .emoji-bomb {
-            font-size: 85px;
+            font-size: 38px;
             margin-bottom: 15px;
             animation: bounce 0.18s infinite alternate;
         }
 
         @keyframes bounce {
-            from { transform: scale(1); }
-            to { transform: scale(1.35); }
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.35);
+            }
         }
 
         .prank-desc {
@@ -217,7 +258,7 @@
             margin-bottom: 25px;
             line-height: 1.5;
             word-break: keep-all;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
             border: 3px solid #fff;
         }
 
@@ -230,10 +271,11 @@
             border: 4px solid #000;
             border-radius: 30px;
             cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
+
 <body>
 
     <!-- [1단계] yvdgraduateshow 방명록 페이지 위장 화면 (흰색 바탕) -->
@@ -243,7 +285,7 @@
                 <span class="site-brand">YVCD GRADUATION SHOW</span>
                 <span class="site-page">GUESTBOOK</span>
             </div>
-            
+
             <div class="guest-intro">
                 <h1>졸업전시회 방명록</h1>
                 <p>
@@ -281,11 +323,12 @@
 
         <div class="prank-desc">
             진짜 방명록에 글 쓰는 줄 알았지?<br>
-            <span style="color: #ff0055; background: #fff; padding: 2px 8px; border-radius: 4px;">황정민 지금 동공지진 옴 🫵😂</span><br>
+            <span style="color: #ff0055; background: #fff; padding: 2px 8px; border-radius: 4px;">황정민 지금 동공지진 옴
+                🫵😂</span><br>
             오늘 간식은 무조건 네가 쏜다!
         </div>
 
-        <button class="btn-retry" onclick="alert('도망갈 수 없습니다 ㅋㅋㅋ 당장 간식 내놔!')">
+        <button class="btn-retry" onclick="alert('도망갈 수 없습니다 ㅋㅋㅋ 당장 커피 쏴~~~')">
             속은 거 쿨하게 인정하기
         </button>
     </div>
@@ -326,4 +369,5 @@
         }
     </script>
 </body>
+
 </html>
